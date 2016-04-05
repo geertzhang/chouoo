@@ -1,0 +1,23 @@
+{
+  "name": "gulp-learn-es5",
+  "description": "gulp bower demo",
+  "main": "index.js",
+  "authors": [
+    "wallen"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/wallenweel/gulp-project-framework",
+  "moduleType": [
+    "node"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "_normalize.scss": "^2.1.3"
+  }
+}

@@ -1,0 +1,149 @@
+
+@charset "utf-8";
+
+@import "libs/normalize";
+@import "libs/variables";
+// @import "libs/font-face";
+
+$font-family: "Microsoft Yahei", SimHei;
+
+$global_font-family: "Roboto", "Helvetica neue", Helvetica, Tahoma, "lantinghei sc", "Microsoft Yahei", sans-serif;
+
+html, body, h1, h2, h3, h4, h5, h6, p {
+	font-family: $global_font-family;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+*, *::before, *::after {
+	user-select: none;
+}
+
+/*************************************************************************/
+
+body {
+	background-color: #fff;
+	font-size: $ft_sz--small;
+	font-family:$font-family;
+}
+
+.header-global {
+    background-color: #fff;
+    height: 100px;
+	@at-root .header-global-wrapper {
+		.tool-bar, .nav-bar {
+			position: relative;
+			a {
+				text-decoration: none;
+			}
+		}
+		.tool-bar {
+			background:#EEE;
+			height:35px;
+			@at-root .tool-bar-wrapper {
+				max-width: 1170px;
+				line-height: 23px;
+				margin: 0 auto;
+			    padding: 6px 15px;
+				.item {
+					&.l {
+						padding: 0;
+					    margin: 0;
+						color: #666;
+					    float: left;
+					    position: relative;
+					}
+					&.r {
+						float: left;
+						color: #666;
+						min-width: 80px;
+						text-align: center;
+					}
+					&:last-child {
+						border-left: 1px solid #ddd;
+					}
+					&.about {
+						.popup-menu-btn {
+							font-size: 20px;
+							padding: 0 5px;
+						}
+						.popup-menu-btn:hover + .popup-menu {
+							display: inline-block;
+						}
+						.popup-menu {
+							display: none;
+							position: absolute;
+							background-color: #ddd;
+							z-index: 4;
+							padding: 16px;
+							top: 42px;
+							width: 200px;
+						}
+					}
+				}
+				.ibhp-keyboard_arrow_down {
+					font-size:24px;
+					line-height: inherit;
+				}
+				.bar-wrapper-float {
+					float:right;
+				}
+			}
+		}
+		.nav-bar {
+			max-width: 1170px;
+		    background-color: #ffffff;
+		    padding: 10px 0 0 0;
+		    margin: 0 auto;
+		    .logo {
+		    	width:300px;
+			    padding: 0px 10px;
+			    float: left;
+			    margin-right: 45px;
+		    	img {
+		    		display:block;
+				    border: 0;
+				    line-height: 0;
+				    vertical-align: middle;
+			        max-width: 100%;
+		    	}
+		    }
+		    .nav-bar-item {
+		    	float: left;
+		    	display:block;
+		    	min-width: 72px;
+		    	margin-right: 35px;
+		    	font-size: 18px;
+		    	text-align: center;
+		    	height: 55px;
+		    	padding: 15px 0;
+		    	color: #333333;
+		    }
+		    .nav-bar-item:hover {
+	    		border-bottom: 2px solid #c9302c;
+		    }
+		    @at-root .submit-project-btn {
+			    width: 130px;
+			    height: 40px;
+			    background: #F00;
+			    display: block;
+			    float: right;
+			    color: #fff;
+			    line-height: 40px;
+		    	.icon-edit {
+				    padding: 0 10px;
+				    font-size: 19px;
+		    	}
+		    	span {
+		    		font-size:16px;
+		    	}
+		    } // @at-root .submit-project-btn
+		}
+	}
+}
