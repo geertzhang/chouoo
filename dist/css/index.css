@@ -409,6 +409,14 @@ html {
           user-select: none;
 }
 
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=3.2.1");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=3.2.1") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=3.2.1") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=3.2.1") format("truetype"), url("../fonts/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*************************************************************************/
 body {
   background-color: #fff;
@@ -543,4 +551,32 @@ body {
 
 .submit-project-btn span {
   font-size: 16px;
+}
+
+main.main-global {
+  width: 100%;
+}
+
+main.main-global > [class^="main-"], main.main-global > div {
+  width: 990px;
+  margin: 0 auto;
+}
+
+main.main-global .main-banner-area {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+main.main-global .main-banner-area img {
+  display: block;
+  margin: 0 auto;
+}
+
+main.main-global .main-web-info {
+  height: 65px;
+}
+
+main.main-global .main-web-info .overview {
+  width: 348px;
 }
