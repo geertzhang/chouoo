@@ -24,6 +24,13 @@ html {
 *, *::before, *::after {
 	user-select: none;
 }
+.fixed {
+	&::before, &::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}
 
 @font-face {
     font-family: 'FontAwesome';
@@ -39,6 +46,12 @@ body {
 	background-color: #fff;
 	font-size: $ft_sz--small;
 	font-family:$font-family;
+	li {
+		list-style-type: none;
+	}
+	a {
+		text-decoration: none;
+	}
 }
 
 .header-global {
@@ -155,10 +168,11 @@ body {
 		}
 	}
 }
-main.main-global {
+.main-global {
 	width: 100%;
+	background-color: #f5f5f5;
 	>[class^="main-"], >div {
-		width: 990px;
+		width: 1200px;
 		margin: 0 auto;
 	}
 	.main-banner-area {
@@ -168,12 +182,177 @@ main.main-global {
 		& img {
 			display:block;
 			margin:0 auto;
-	}
+		}
 	}
 	.main-web-info {
+		width: 100%;
 		height: 65px;
-		.overview {
-			width: 348px;
+		background: #fff;
+		box-shadow: 0 -15px 27px rgba(0,0,0,0.19);
+		position: relative;
+		.web-info-wrapper {
+			max-width: 1200px;
+			margin: 0 auto;
+			color: #7c7c7c;
+			.overview {
+				width: 228px;
+				display: inline-block;
+				line-height: 65px;
+				padding-right: 35px;
+				span {
+					font-size: 28px;
+					font-weight: bold;
+					padding-right: 10px;
+				}
+				&.special {
+					width: 328px;
+				}
+				.icon-user-md {
+					font-size: 37px;
+				}
+				.sum-money {
+					color: #ff7c24;
+				}
+				.sum-success {
+					color: #55acef;
+				}
+				.sum-online {
+					color: #ff889c;
+				}
+			}
+		}
+	}
+	.main-show {
+		h2 {
+			color: #F00;
+		}
+	    .more {
+	        width: 90px;
+	        height: 30px;
+	    	float: right;
+	    	background: #F00;
+	        color: #fff;
+	        text-align: center;
+	        cursor: pointer;
+	        border-radius: 5px;
+	        text-decoration: none;
+	        font-size: 14px;
+	        margin-top: 15px;
+	        line-height: 30px;
+	    }
+	    .main-newsa-layout {
+	    	height: 300px;
+	    	overflow: hidden;
+	    	h2 {
+	    		float: left;
+	    	}
+			.main-news-alerts {
+			    float: left;
+			    width: 50%;
+			    overflow: hidden;
+			    padding-right: 10px;
+			    .r {
+			    	margin-right: -10px;
+			    }
+			    .news-alerts-list {
+			    	clear: both;
+			    	a {
+			    		:hover {}
+				    	h3 {}
+			    	}
+			    	p {}
+			    	span {}
+			    }
+			}
+		}
+		.financing-project {
+			height: 600px;
+			overflow: hidden;
+			h2 {
+				float: left;
+			}
+			.financing-project-content {
+				clear: left;
+				.project-content-img {
+					float: left;
+					width: 80%;
+					height: 300px;
+					& img {
+						display: inline-block;
+						width: 90%;
+						height: 100%;
+					}
+				}
+			}
+			.financing-project-info {
+				h3 {}
+				&.span {}
+				.project-info-cityinfo {}
+				.financing-info {
+					.financing-info-amount {}
+					.financing-info-remain {}
+					.financing-info-money {}
+				}
+				.financing-select {
+					.financing-support {}
+					.financing-about {}
+				}
+			}
+		}
+		.project-comments-answers {
+			height: 300px;
+			.comments-answers-area {
+				width: 50%;
+				float: left;
+				.comments-area-info {
+					>p {}
+					>a {
+						&:hover {}
+					}
+					>i {}
+					.area-info-time {}
+				}
+				.answers-area-info {
+					.area-info-title {}
+					.area-info-content {}
+				}
+			}
+		}
+		.success-case {
+			h2 {
+				float: left;
+			}
+			.success-case-content {
+				margin-right: -30px;
+				.success-case-details {
+					width: 25%;
+					overflow: hidden;
+					float: left;
+					padding-right: 30px;
+					.case-details-img {
+						display: inline-block;
+						height: 185px;
+						& img {
+							width: auto;
+							height: auto;
+							max-width: 100%;
+							max-height: 100%;
+						}
+					}
+					.case-details-title {
+						display: inline-block;
+						background: #00b0f5;
+						width: 100%;
+						text-align: center;
+					}
+					.case-details-area {
+						text-align: center;
+						color: #666;
+						height: 30px;
+						line-height: 30px;
+					}
+				}
+			}
 		}
 	}
 }
